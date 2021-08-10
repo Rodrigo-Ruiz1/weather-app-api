@@ -42,7 +42,7 @@ router.post('/add_favorite', async (req, res) => {
     res.json(response).status(200);
 })
 
-router.post('/delete_favorite', async (req, res) => {
+router.delete('/delete_favorite', async (req, res) => {
     const {id} = req.body;
     const response = await UsersModel.deleteFavorite(id);
     res.json(response).status(200);
